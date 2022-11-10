@@ -47,10 +47,8 @@ InitializeSpotlightGUI2(){
             if (SETTINGS.cursorSpotlight.enabled == True)
             {
                 MouseGetPos, X, Y, WinID
-                WinGetTitle, WinTitle, ahk_id %WinID%
-                WinGetPos, WinX, WinY, WinWidth, WinHeight, %WinTitle%
                 X -= CursorSpotlightDiameter / 2
-                Offset := WinWidth / 2
+                Offset := SETTINGS.cursorSpotlight.screenWidth / 2
                 if (X > Offset)
                 {
                     X -= Offset

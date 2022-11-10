@@ -1,5 +1,10 @@
-This script was modified from https://github.com/yunyi-the-coder/mouse-cursor-highlight-windows
+This script was modified from https://github.com/yunyi-the-coder/mouse-cursor-highlight-windows - that one provides a lot more features useful for things like screen capturing, this is simplified for one purpose!
 
-It is used to make a mouse cursor that will show up correctly in fullscreen Side by Side 3D apps
+Use this to make a visible circle that appears on BOTH halves of a Side-by-Side 3D window where you. Useful for tools like virtual desktop to make 
+How to use:
 
-It works fine as long as you are using your app in fullscreen. run "Start.ahk" in AutoHotKey to make it start.
+1. Install AutoHotkey if you don't have it
+2. Set the width of your screen in settings.ini. You can also change the size and color of the highlighting circle.
+3. Double-click Start.ahk and the highlighting will appear.
+4. You can exit the script using the green H icon that appears in the taskbar (right click => exit)
+
