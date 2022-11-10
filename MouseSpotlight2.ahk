@@ -30,7 +30,7 @@ InitializeSpotlightGUI2(){
         Gui, CursorSpotlightWindow2: Show, x0 y0 w%CursorSpotlightDiameter% h%CursorSpotlightDiameter% NA
         WinSet, Transparent, % SETTINGS.CursorSpotlight.spotlightOpacity, ahk_id %CursorSpotlightHwnd2%
         ; Create a ring region to highlight the cursor
-        finalRegion := DllCall("CreateEllipticRgn", "Int", 0, "Int", 0, "Int", CursorSpotlightDiameter, "Int", CursorSpotlightDiameter)
+        finalRegion := DllCall("CreateEllipticRgn", "Int", 0, "Int", 0, "Int", CursorSpotlightDiameter / 2, "Int", CursorSpotlightDiameter)
         if (spotlightOuterRingWidth < CursorSpotlightDiameter/2)
         {
             inner := DllCall("CreateEllipticRgn", "Int", spotlightOuterRingWidth, "Int", spotlightOuterRingWidth, "Int", CursorSpotlightDiameter-spotlightOuterRingWidth, "Int", CursorSpotlightDiameter-spotlightOuterRingWidth)
@@ -47,7 +47,7 @@ InitializeSpotlightGUI2(){
             if (SETTINGS.cursorSpotlight.enabled == True)
             {
                 MouseGetPos, X, Y, WinID
-                X -= CursorSpotlightDiameter / 2
+                X -= CursorSpotlightDiameter / 4
                 Offset := SETTINGS.cursorSpotlight.screenWidth / 2
                 if (X > Offset)
                 {
